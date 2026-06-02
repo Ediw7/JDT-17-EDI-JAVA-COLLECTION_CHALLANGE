@@ -48,9 +48,7 @@ public class EmployeeLogicClean {
     }
 
     private static void printList(List<EmployeeDto> list) {
-        for (EmployeeDto e : list) {
-            System.out.println(e.toString());
-        }
+        list.forEach(System.out::println);
         System.out.println();
     }
 

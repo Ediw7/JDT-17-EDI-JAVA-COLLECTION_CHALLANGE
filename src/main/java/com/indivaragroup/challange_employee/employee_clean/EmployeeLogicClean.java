@@ -1,5 +1,6 @@
 package com.indivaragroup.challange_employee.employee_clean;
 
+import com.indivaragroup.challange_employee.data.EmployeeData;
 import com.indivaragroup.challange_employee.dto.EmployeeDto;
 
 import java.util.*;
@@ -53,17 +54,7 @@ public class EmployeeLogicClean {
     }
 
     public static void main(String[] args) {
-        List<EmployeeDto> listEmployee = new ArrayList<>();
-        listEmployee.add(new EmployeeDto("Edi", 8000000, "Batang", 'L'));
-        listEmployee.add(new EmployeeDto("Anis", 7000000, "Semarang", 'P'));
-        listEmployee.add(new EmployeeDto("Budi", 6000000, "Jakarta", 'L'));
-        listEmployee.add(new EmployeeDto("Siti", 9000000, "Bandung", 'P'));
-        listEmployee.add(new EmployeeDto("Joko", 2000000, "Batang", 'L'));
-        listEmployee.add(new EmployeeDto("Rina", 5000000, "Jakarta", 'P'));
-        listEmployee.add(new EmployeeDto("Andi", 8000000, "Semarang", 'L'));
-        listEmployee.add(new EmployeeDto("Dewi", 9000000, "Bandung", 'P'));
-        listEmployee.add(new EmployeeDto("Eko", 7000000, "Surabaya", 'L'));
-        listEmployee.add(new EmployeeDto("Fitri", 1000000, "Semarang", 'P'));
+        List<EmployeeDto> listEmployee = EmployeeData.getAllEmployees();
 
         System.out.println("SORTING NAMA (A-Z)");
         sortName(new ArrayList<>(listEmployee));
